@@ -21,8 +21,8 @@ def profesores(request):
 
 
 def cursos(request):
-    return HttpResponse('Vista de cursos')
+    return HttpResponse('appcoder/cursos.html')
 
 
 def entregables(request):
-    return HttpResponse('Vista de entregables')
+    return HttpResponse('appcoder/entregables.html')
