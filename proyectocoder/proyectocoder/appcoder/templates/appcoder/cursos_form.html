@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Curso</title>
+</head>
+<body>
+    <form action="/appcoder/cursos_form/" method="post">
+        {% csrf_token %}
+        <table>
+            {{formulario}}
+        </table>
+        <input type="submit" value="Cargar Curso">
+    </form>
+    {% if formulario.errors %}
+        <p style="color: red;">Hay un error en los datos cargados!</p>
+    {% endif %}
+</body>
+</html>
